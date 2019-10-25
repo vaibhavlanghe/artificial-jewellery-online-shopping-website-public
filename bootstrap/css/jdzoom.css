@@ -1,0 +1,47 @@
+.jdz_looking_glass {
+	border: 1px solid white;
+	width: 20%;
+	height: 20%;
+	position: absolute;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: rgba(255, 255, 255, 0.2);
+}
+
+.jdz_img {
+	position: absolute;
+	z-index: 50;
+}
+
+.jdz_magnified {
+	height: 300px;
+	width: 300px;
+	position: relative;
+	right: 301px;
+	border: 1px solid #eee;
+	-moz-border-radius: 5px;
+	z-index: 100;
+}
+
+/* * Endless.com Style * */
+
+.jdz_looking_glass_fixed {
+	width: 30%;
+	height: 30%;
+	position: absolute;
+	background: url(images/grid.png);
+}
+
+.jdz_img_fixed {
+	position: absolute;
+	z-index: 50;
+}
+
+.jdz_magnified_fixed {
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	right: 301px;
+	z-index: 100;
+}

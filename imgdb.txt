@@ -1,0 +1,31 @@
+
+creating image database in mysql
+
+CREATE TABLE images(
+    ID int NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    PNAME varchar(150) not null,
+    PATH varchar(255) not null,
+    TYPE varchar(150) not null
+);
+
+DELIMITER $$
+CREATE PROCEDURE imageInsert(IN getPID int,IN getName varchar(150), IN getPath varchar(255), IN getType varchar(150))
+BEGIN
+INSERT INTO images(PID, PNAME, PATH, TYPE) VALUES (getPID, getName, getPath, getType);
+END $$
+DELIMITER;
+
+
+CREATING CART TABLE
+CREATE TABLE cart (
+	CARTID INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    PTYPE VARCHAR(200) NOT NULL,
+    PRICE INT NOT NULL,
+    QUANTITY DECIMAL(16,2) NOT NULL,
+    TOTAL DECIMAL(16,2) NOT NULL,
+    BUY_STATUS VARCHAR(150) NOT NULL,
+    PID INT NOT NULL,
+    CID INT NOT NULL,
+    FOREIGN KEY(PID) REFERENCES products(pid),
+    FOREIGN KEY(CID) REFERENCES customer(CID)
+);
